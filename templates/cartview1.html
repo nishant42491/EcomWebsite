@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}cartadd2{% endblock title %}
+{% block content %}
+<h1>Cart Contains:- <br></h1>
+{% for c in object_list %}
+{% if c.quantity %}
+
+<p>product name:-<br>{{c.productname}}<p>
+<p>product price<br>{{c.itemprice}}</p>
+<p>product quantity,<br>{{c.quantity}}</p>
+{% else %}
+{% endif %}
+{% endfor %}
+<a href="/products/">go to products screen</a>
+{% endblock content %}
